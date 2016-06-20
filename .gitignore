@@ -28,6 +28,3 @@ node_modules
 
 # Dist directory where grunt script produces plugin installation files
 dist
-
-#Exclude all javascript (js) files from source code
-src/**/*.js
