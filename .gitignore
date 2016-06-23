@@ -28,3 +28,9 @@ node_modules
 
 # Dist directory where grunt script produces plugin installation files
 dist
+
+# Platforms folder
+platforms
+
+# Archive packages
+*.tgz

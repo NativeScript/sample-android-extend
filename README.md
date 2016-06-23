@@ -1,1 +1,5 @@
-# android-extend-samples
+# Extending Application and Activity
+This sample demonstrates how to create custom `android.app.Application` and `android.app.Activity` implementations in a NativeScript application.
+
+## Philosophy
+Because NativeScript is a JavaScript-to-Native framework, our main goal is to make as much as possible from the underlying native platforms easy to implement in JavaScript. Initially we discussed the option where developers would write Java code to achieve some more special cases like custom `android.app.Activity` implementations but then we agreed that we should explore a JavaScript approach first and only if it is not possible to fallback to native code. It turned to be pretty easy, especially with the new [Static Binding Generator](https://www.nativescript.org/blog/details/static-binding-generator---what-is-it-good-for) tool.   
