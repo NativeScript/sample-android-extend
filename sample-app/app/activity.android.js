@@ -28,7 +28,7 @@ var Activity = android.app.Activity.extend("org.myApp.MainActivity", {
     onRequestPermissionsResult: function (requestCode, permissions, grantResults) {
         this._callbacks.onRequestPermissionsResult(this, requestCode, permissions, grantResults, undefined);
     },
-    onActivityResult = function (requestCode, resultCode, data) {
+    onActivityResult: function (requestCode, resultCode, data) {
         this._callbacks.onActivityResult(this, requestCode, resultCode, data, _super.prototype.onActivityResult);
     }
 });
