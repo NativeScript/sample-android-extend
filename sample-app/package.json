@@ -6,11 +6,11 @@
 	"nativescript": {
 		"id": "org.nativescript.sampleapp",
 		"tns-android": {
-			"version": "2.1.0-2016.6.20.1"
+			"version": "2.2.0"
 		}
 	},
 	"dependencies": {
-		"tns-core-modules": "2.0.1"
+		"tns-core-modules": "2.2.1"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.9.0",
