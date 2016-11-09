@@ -6,7 +6,9 @@ var Application = android.app.Application.extend("org.myApp.Application", {
         superProto.onCreate.call(this);
 
         // initialize the application module with the native Android Application object
-        application.android.init(this);
+        // application.android.init(this);
+	// DONT CALL THIS, look here:
+	// https://github.com/NativeScript/android-runtime/issues/612
 
         // Enter custom initialization code here
     },
