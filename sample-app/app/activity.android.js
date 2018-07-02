@@ -1,28 +1,29 @@
-var frame = require("ui/frame");
+const frame = require("ui/frame");
 
-var superProto = android.app.Activity.prototype;
-var Activity = android.app.Activity.extend("org.myApp.MainActivity", {
-    onCreate: function(savedInstanceState) {
-        if(!this._callbacks) {
+const superProto = android.app.Activity.prototype;
+android.app.Activity.extend("org.myApp.MainActivity", {
+    onCreate: function (savedInstanceState) {
+        if (!this._callbacks) {
             frame.setActivityCallbacks(this);
         }
+        // Modules will take care of calling super.onCreate, do not call it here
         this._callbacks.onCreate(this, savedInstanceState, superProto.onCreate);
 
-        // add custom initialization logic here
+        // Add custom initialization logic here
     },
-    onSaveInstanceState: function(outState) {
+    onSaveInstanceState: function (outState) {
         this._callbacks.onSaveInstanceState(this, outState, superProto.onSaveInstanceState);
     },
-    onStart: function() {
+    onStart: function () {
         this._callbacks.onStart(this, superProto.onStart);
     },
-    onStop: function() {
+    onStop: function () {
         this._callbacks.onStop(this, superProto.onStop);
     },
-    onDestroy: function() {
+    onDestroy: function () {
         this._callbacks.onDestroy(this, superProto.onDestroy);
     },
-    onBackPressed: function() {
+    onBackPressed: function () {
         this._callbacks.onBackPressed(this, superProto.onBackPressed);
     },
     onRequestPermissionsResult: function (requestCode, permissions, grantResults) {
